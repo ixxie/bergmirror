@@ -7,9 +7,7 @@
 <style>
   body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; color: #333; }
   a { color: #2185D0; }
-  code { background: #f4f4f4; padding: 0.1em 0.3em; border-radius: 3px; word-break: break-all; }
-  .debug { background: #fffbe6; border: 1px solid #ffe58f; padding: 0.75rem 1rem; border-radius: 4px; margin: 1rem 0; font-size: 0.9em; }
-  .debug code { background: #fff; }
+  code { background: #f4f4f4; padding: 0.1em 0.3em; border-radius: 3px; }
 </style>
 <script>
   (function() {
@@ -36,12 +34,6 @@
     <li><a id="cb" href="https://codeberg.org/">Codeberg (canonical)</a></li>
     <li><a id="gh" href="https://github.com/">GitHub (mirror)</a></li>
   </ul>
-  <div class="debug">
-    <strong>Diagnostics</strong> (because the auto-redirect didn't fire):<br>
-    <code>document.referrer</code>: <code id="d-ref"></code><br>
-    <code>cb</code>: <code id="d-cb"></code><br>
-    <code>gh</code>: <code id="d-gh"></code>
-  </div>
   <p><small>This page exists to make the <a href="https://codeberg.org/ixxie/bergmirror">mirror badge</a> point you to the <em>other</em> platform from the one you're already viewing. Usage: <code>?cb=user/repo&amp;gh=user/repo</code>.</small></p>
   <script>
     const params = new URLSearchParams(location.search);
@@ -52,9 +44,6 @@
     if (!cb || !gh) {
       document.getElementById('status').textContent = 'Missing parameters. This page expects ?cb=user/repo&gh=user/repo.';
     }
-    document.getElementById('d-ref').textContent = document.referrer || '(empty)';
-    document.getElementById('d-cb').textContent = cb || '(missing)';
-    document.getElementById('d-gh').textContent = gh || '(missing)';
   </script>
 </body>
 </html>
