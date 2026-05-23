@@ -12,7 +12,7 @@ Place the badge at the top-right, above your title:
 
 ```markdown
 <div align="right">
-  <a href="https://ixxie.codeberg.page/bergmirror/r/?cb=USER/REPO&gh=USER/REPO"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
+  <a href="https://ixxie.codeberg.page/bergmirror/redirect/?cb=USER/REPO&gh=USER/REPO"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
 </div>
 
 # Your project title
