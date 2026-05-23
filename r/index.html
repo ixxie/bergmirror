@@ -7,19 +7,21 @@
 <style>
   body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; color: #333; }
   a { color: #2185D0; }
+  code { background: #f4f4f4; padding: 0.1em 0.3em; border-radius: 3px; }
 </style>
 <script>
   (function() {
     const params = new URLSearchParams(location.search);
-    const repo = params.get('repo');
-    if (!repo) return;
+    const cb = params.get('cb');
+    const gh = params.get('gh');
+    if (!cb || !gh) return;
 
     let refHost = '';
     try { refHost = new URL(document.referrer).hostname; } catch (e) {}
 
     const target = refHost === 'codeberg.org'
-      ? 'https://github.com/ixxie/' + encodeURIComponent(repo)
-      : 'https://codeberg.org/ixxie/' + encodeURIComponent(repo);
+      ? 'https://github.com/' + gh
+      : 'https://codeberg.org/' + cb;
 
     location.replace(target);
   })();
@@ -27,18 +29,20 @@
 </head>
 <body>
   <h1>Redirecting…</h1>
-  <p>If you are not redirected automatically, choose where to go:</p>
+  <p id="status">If you are not redirected automatically, choose where to go:</p>
   <ul>
-    <li><a id="cb" href="https://codeberg.org/ixxie">Codeberg (canonical)</a></li>
-    <li><a id="gh" href="https://github.com/ixxie">GitHub (mirror)</a></li>
+    <li><a id="cb" href="https://codeberg.org/">Codeberg (canonical)</a></li>
+    <li><a id="gh" href="https://github.com/">GitHub (mirror)</a></li>
   </ul>
-  <p><small>This page exists to make the <a href="https://codeberg.org/ixxie/bergmirror">mirror badge</a> point you to the <em>other</em> platform from the one you're already viewing.</small></p>
+  <p><small>This page exists to make the <a href="https://codeberg.org/ixxie/bergmirror">mirror badge</a> point you to the <em>other</em> platform from the one you're already viewing. Usage: <code>?cb=user/repo&amp;gh=user/repo</code>.</small></p>
   <script>
     const params = new URLSearchParams(location.search);
-    const repo = params.get('repo');
-    if (repo) {
-      document.getElementById('cb').href = 'https://codeberg.org/ixxie/' + encodeURIComponent(repo);
-      document.getElementById('gh').href = 'https://github.com/ixxie/' + encodeURIComponent(repo);
+    const cb = params.get('cb');
+    const gh = params.get('gh');
+    if (cb) document.getElementById('cb').href = 'https://codeberg.org/' + cb;
+    if (gh) document.getElementById('gh').href = 'https://github.com/' + gh;
+    if (!cb || !gh) {
+      document.getElementById('status').textContent = 'Missing parameters. This page expects ?cb=user/repo&gh=user/repo.';
     }
   </script>
 </body>

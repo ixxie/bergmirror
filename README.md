@@ -12,13 +12,15 @@ Place the badge at the top-right, above your title:
 
 ```markdown
 <div align="right">
-  <a href="https://ixxie.codeberg.page/bergmirror/r/?repo=YOUR-REPO"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
+  <a href="https://ixxie.codeberg.page/bergmirror/r/?cb=USER/REPO&gh=USER/REPO"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
 </div>
 
 # Your project title
 ```
 
-Replace `YOUR-REPO` with the repository name (e.g. `dotfiles`).
+Fill in:
+- `cb=<codeberg-user>/<codeberg-repo>` — your canonical Codeberg location
+- `gh=<github-user>/<github-repo>` — your GitHub mirror (can differ in user *and* repo name)
 
 The link goes through a tiny redirect page on Codeberg Pages that bounces you to the **other** platform from the one you're currently viewing:
 
