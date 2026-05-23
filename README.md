@@ -11,9 +11,9 @@ A small badge for repositories that are primarily developed on [Codeberg](https:
 Place the badge at the top-right, above your title:
 
 ```markdown
-<p align="right">
+<div align="right">
   <a href="https://codeberg.org/ixxie/bergmirror"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
-</p>
+</div>
 
 # Your project title
 ```
