@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>bergmirror · redirecting…</title>
+<meta name="robots" content="noindex">
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; color: #333; }
+  a { color: #2185D0; }
+</style>
+<script>
+  (function() {
+    const params = new URLSearchParams(location.search);
+    const repo = params.get('repo');
+    if (!repo) return;
+
+    let refHost = '';
+    try { refHost = new URL(document.referrer).hostname; } catch (e) {}
+
+    const target = refHost === 'codeberg.org'
+      ? 'https://github.com/ixxie/' + encodeURIComponent(repo)
+      : 'https://codeberg.org/ixxie/' + encodeURIComponent(repo);
+
+    location.replace(target);
+  })();
+</script>
+</head>
+<body>
+  <h1>Redirecting…</h1>
+  <p>If you are not redirected automatically, choose where to go:</p>
+  <ul>
+    <li><a id="cb" href="https://codeberg.org/ixxie">Codeberg (canonical)</a></li>
+    <li><a id="gh" href="https://github.com/ixxie">GitHub (mirror)</a></li>
+  </ul>
+  <p><small>This page exists to make the <a href="https://codeberg.org/ixxie/bergmirror">mirror badge</a> point you to the <em>other</em> platform from the one you're already viewing.</small></p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const repo = params.get('repo');
+    if (repo) {
+      document.getElementById('cb').href = 'https://codeberg.org/ixxie/' + encodeURIComponent(repo);
+      document.getElementById('gh').href = 'https://github.com/ixxie/' + encodeURIComponent(repo);
+    }
+  </script>
+</body>
+</html>
