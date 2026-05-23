@@ -4,7 +4,7 @@
 
 # bergmirror
 
-A small badge for repositories that are primarily developed on [Codeberg](https://codeberg.org) and mirrored to GitHub.
+A small badge for repositories developed on [Codeberg](https://codeberg.org) and mirrored to GitHub — with a magic link that **always sends visitors to the other platform**. Click the badge on Codeberg, land on GitHub. Click it on GitHub, land on Codeberg. No duplicate badges, no manual switching.
 
 ## Badge
 
