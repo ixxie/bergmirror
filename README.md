@@ -8,10 +8,14 @@ A small badge for repositories that are primarily developed on [Codeberg](https:
 
 ## Usage
 
-Add to your README:
+Place the badge at the top-right, above your title:
 
 ```markdown
-[![Codeberg → GitHub mirror](https://ixxie.codeberg.page/bergmirror/badge.svg)](https://codeberg.org/ixxie/<repo>)
+<p align="right">
+  <a href="https://codeberg.org/ixxie/bergmirror"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
+</p>
+
+# Your project title
 ```
 
-The badge links back to the canonical Codeberg repository.
+The badge links to this repo, which explains what the mirror relationship means — useful whether the reader is on Codeberg or on GitHub.

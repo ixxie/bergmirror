@@ -1,6 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="156" height="28" viewBox="0 0 156 28" role="img" aria-label="Codeberg to GitHub mirror">
+<svg xmlns="http://www.w3.org/2000/svg" width="113" height="20" viewBox="0 0 113 20" role="img" aria-label="Codeberg → GitHub mirror">
   <title>Codeberg → GitHub mirror</title>
   <defs>
+    <linearGradient id="shine" x2="0" y2="100%">
+      <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+      <stop offset="1" stop-opacity=".1"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect width="113" height="20" rx="3" fill="#fff"/>
+    </clipPath>
     <linearGradient id="cbBerg" x1="42519.285" y1="-7078.7891" x2="42575.336" y2="-6966.9307" gradientUnits="userSpaceOnUse">
       <stop offset="0" style="stop-color:#ffffff;stop-opacity:0"/>
       <stop offset="0.495" style="stop-color:#ffffff;stop-opacity:0.3"/>
@@ -8,26 +15,33 @@
     </linearGradient>
   </defs>
 
-  <rect width="156" height="28" rx="4" fill="#1f2328"/>
+  <g clip-path="url(#round)">
+    <rect width="58" height="20" fill="#555"/>
+    <rect x="58" width="55" height="20" fill="#2185D0"/>
+    <rect width="113" height="20" fill="url(#shine)"/>
+  </g>
 
-  <!-- Official Codeberg "icon_inverted" logo -->
-  <svg x="6" y="6" width="16" height="16" viewBox="0 0 4.2333332 4.2333335">
+  <!-- Codeberg official mark -->
+  <svg x="5" y="3" width="14" height="14" viewBox="0 0 4.2333332 4.2333335">
     <g transform="matrix(0.06551432,0,0,0.06551432,-2.232417,-1.431776)">
       <path d="m 42519.285,-7078.7891 a 0.76086879,0.56791688 0 0 0 -0.738,0.6739 l 33.586,125.8886 a 87.182358,87.182358 0 0 0 39.381,-33.7636 l -71.565,-92.5196 a 0.76086879,0.56791688 0 0 0 -0.664,-0.2793 z" transform="matrix(0.37058478,0,0,0.37058478,-15690.065,2662.0533)" fill="url(#cbBerg)"/>
       <path d="m 11249.461,-1883.6961 c -12.74,0 -23.067,10.3275 -23.067,23.0671 0,4.3335 1.22,8.5795 3.522,12.2514 l 19.232,-24.8636 c 0.138,-0.1796 0.486,-0.1796 0.624,0 l 19.233,24.8646 c 2.302,-3.6721 3.523,-7.9185 3.523,-12.2524 0,-12.7396 -10.327,-23.0671 -23.067,-23.0671 z" transform="matrix(1.4006354,0,0,1.4006354,-15690.065,2662.0533)" fill="#ffffff"/>
     </g>
   </svg>
 
-  <!-- Thick arrow with triangular head, uniform rounded corners -->
-  <path d="M27.5,12 L36,12 L36,8.5 L43.5,14 L36,19.5 L36,16 L27.5,16 Z"
-        fill="#9ea6b3" stroke="#9ea6b3" stroke-width="1"
+  <!-- Arrow -->
+  <path d="M22.5,9 L29,9 L29,7 L34,10 L29,13 L29,11 L22.5,11 Z"
+        fill="#dee2e6" stroke="#dee2e6" stroke-width="0.8"
         stroke-linejoin="round" stroke-linecap="round"/>
 
   <!-- GitHub Octocat -->
-  <g transform="translate(48,6) scale(0.667)" fill="#ffffff">
+  <g transform="translate(39,3) scale(0.583)" fill="#ffffff">
     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
   </g>
 
-  <!-- MIRROR label -->
-  <text x="72" y="19" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" font-weight="600" letter-spacing="1.2">MIRROR</text>
+  <!-- MIRROR text (shields.io style: drop shadow + main) -->
+  <g fill="#ffffff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="85.5" y="15" fill="#010101" fill-opacity=".3">MIRROR</text>
+    <text x="85.5" y="14">MIRROR</text>
+  </g>
 </svg>
