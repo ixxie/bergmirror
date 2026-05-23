@@ -1,3 +1,7 @@
+<div align="right">
+  <a href="https://ixxie.codeberg.page/bergmirror/redirect/?cb=ixxie/bergmirror&gh=ixxie/bergmirror"><img src="https://ixxie.codeberg.page/bergmirror/badge.svg" alt="Codeberg → GitHub mirror"/></a>
+</div>
+
 # bergmirror
 
 A small badge for repositories that are primarily developed on [Codeberg](https://codeberg.org) and mirrored to GitHub.
